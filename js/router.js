@@ -2,4 +2,10 @@ Todos.Router.map(function () {
   this.resource('todos', { path: '/' });
 });
 
-console.log('router.js');
+Todos.TodosRoute = Ember.Route.extend({
+  model: function () {
+    return Todos.Todo.find();
+  }
+});
+
+// console.log('router.js');
